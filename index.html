@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE — Rama Estudiantil Universidad Don Bosco</title>
+    <meta name="description" content="Sitio oficial de la rama estudiantil IEEE de la Universidad Don Bosco: quiénes somos, qué hacemos, nuestro evento más importante y dashboard de indicadores.">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ============ CABECERA ============ -->
+    <header class="cabecera" id="cabecera">
+        <div class="contenedor cabecera-interno">
+            <a href="#inicio" class="marca">
+                <img src="img/logo-rama.png" alt="Universidad Don Bosco · IEEE Student Branch" class="marca-logo-img">
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#inicio" class="nav-enlace activo">Inicio</a>
+                <a href="#quienes-somos" class="nav-enlace">Quiénes somos</a>
+                <a href="#que-hacemos" class="nav-enlace">Qué hacemos</a>
+                <a href="#evento" class="nav-enlace">Nuestro evento</a>
+                <a href="#dashboard" class="nav-enlace">Dashboard</a>
+            </nav>
+
+            <button class="nav-boton" id="navBoton" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="inicio">
+            <div class="contenedor hero-interno">
+                <div class="hero-texto">
+                    <span class="etiqueta">Rama Estudiantil · Universidad Don Bosco</span>
+                    <h1>Conectamos, formamos e inspiramos a la comunidad técnica UDB</h1>
+                    <p>
+                        Somos estudiantes de ingeniería y tecnologías de la información que organizan
+                        talleres, competencias y eventos para acercar la ingeniería a todo el campus.
+                        Aquí conocerás quiénes somos, qué hacemos y cómo nos va en números.
+                    </p>
+                    <div class="hero-acciones">
+                        <a href="#evento" class="boton primario">Ver nuestro evento</a>
+                        <a href="#dashboard" class="boton secundario">Explorar dashboard</a>
+                    </div>
+                </div>
+
+                <div class="hero-panel" aria-hidden="true">
+                    <div class="hero-panel-cabecera">
+                        <span class="punto"></span><span class="punto"></span><span class="punto"></span>
+                        <span class="hero-panel-titulo"> IEEE STUDENT BRANCH EL SALVADOR SECTION</span>
+                    </div>
+                    <div class="hero-panel-cuerpo">
+                        <div class="mini-kpi">
+                            <span class="mini-kpi-valor" data-contador="167">0</span>
+                            <span class="mini-kpi-etiqueta">Miembros de la rama</span>
+                        </div>
+                        <div class="mini-kpi">
+                            <span class="mini-kpi-valor" data-contador="117">0</span>
+                            <span class="mini-kpi-etiqueta">Actividades</span>
+                        </div>
+                        <div class="mini-kpi">
+                            <span class="mini-kpi-valor" data-contador="14">0</span>
+                            <span class="mini-kpi-etiqueta">Colaboraciones con Empresas</span>
+                        </div>
+                        <div class="mini-kpi">
+                            <span class="mini-kpi-valor" data-contador="12">0</span>
+                            <span class="mini-kpi-etiqueta">Capitulos Estudiantiles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-onda"></div>
+        </section>
+
+        <!-- ============ QUIÉNES SOMOS ============ -->
+        <section class="seccion" id="quienes-somos">
+            <div class="contenedor">
+                <div class="seccion-cabecera">
+                    <span class="etiqueta">Quiénes somos</span>
+                    <h2>Una comunidad estudiantil con vocación técnica y humana</h2>
+                    <p>
+                        IEEE UDB es la rama estudiantil del Instituto de Ingenieros Eléctricos y
+                        Electrónicos (IEEE) en la Universidad Don Bosco. Existimos para que los
+                        estudiantes vivan la ingeniería fuera del aula.
+                    </p>
+                </div>
+
+                <div class="rejilla tres">
+                    <article class="tarjeta">
+                        <div class="tarjeta-icono">🎯</div>
+                        <h3>Misión</h3>
+                        <p>Formar profesionales con habilidades técnicas, liderazgo y sentido ético, acercando IEEE a los estudiantes de la UDB.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <div class="tarjeta-icono">🔭</div>
+                        <h3>Visión</h3>
+                        <p>Ser la rama estudiantil referente de innovación y comunidad técnica del país, reconocida por su impacto en la sociedad.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <div class="tarjeta-icono">💡</div>
+                        <h3>Valores</h3>
+                        <p>Colaboración, excelencia técnica, inclusión y servicio. Todo lo que hacemos lo hacemos con y para la comunidad.</p>
+                    </article>
+                </div>
+
+                <div class="equipo-cabecera">
+                    <h3>Cómo nos organizamos</h3>
+                    <p>
+                        La idea es que cada capítulo tenga su propia directiva y sus actividades,
+                        pero que todos se integren mediante la <strong>Rama Estudiantil</strong>.
+                    </p>
+                </div>
+
+                <div class="rejilla dos equipo">
+                    <div class="tarjeta estructura">
+                        <div class="tarjeta-icono">🏛️</div>
+                        <h3>Rama IEEE UDB</h3>
+                        <p class="estructura-bajada">Coordinación general de todos los capítulos.</p>
+                        <ul class="lista">
+                            <li><strong>Coordinación general</strong> de la rama estudiantil.</li>
+                            <li><strong>Planificación anual</strong> de actividades.</li>
+                            <li><strong>Actividades institucionales</strong> que reúnen a todos los capítulos.</li>
+                            <li><strong>Integración entre capítulos</strong>.</li>
+                            <li><strong>Representación ante IEEE y la UDB</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tarjeta estructura">
+                        <div class="tarjeta-icono">⚙️</div>
+                        <h3>Cada capítulo</h3>
+                        <p class="estructura-bajada">Directiva propia y actividades técnicas de su área.</p>
+                        <ul class="lista">
+                            <li><strong>Presidente y directiva</strong> propios.</li>
+                            <li><strong>Actividades técnicas</strong> de su disciplina.</li>
+                            <li><strong>Proyectos</strong> con impacto real.</li>
+                            <li><strong>Talleres y charlas</strong>.</li>
+                            <li><strong>Participación en las actividades de la Rama</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cita cita-ancho">
+                    <p>“IEEE no es solo una organización; es una comunidad que transforma conocimiento en ideas, ideas en innovación y voluntarios en líderes que construyen el futuro.”</p>
+                    <span>— Junta directiva 2026</span>
+                </div>
+
+                 <div class="cita cita-ancho">
+                    <p>“IEEE UDB  impulsa la innovación, el liderazgo y el desarrollo profesional en tecnología, para los futuros ingenieros.”</p>
+                    <span>— Kevin Sanchéz</span>
+                </div>
+
+                 <div class="cita cita-ancho">
+                    <p>“IEEE UDB conecta a estudiantes con la tecnología, la investigación y el liderazgo que están transformando la ingeniería.”</p>
+                    <span>— Cristian Rosales</span>
+                </div>
+
+                 <div class="cita cita-ancho">
+                    <p>“IEEE UDB transforma la teoría en impacto real, formando líderes apasionados por la tecnología, la innovación y el trabajo en equipo.”</p>
+                    <span>— Josue Gonzaléz</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ QUÉ HACEMOS ============ -->
+        <section class="seccion alterna" id="que-hacemos">
+            <div class="contenedor">
+                <div class="seccion-cabecera">
+                    <span class="etiqueta">Qué hacemos</span>
+                    <h2>Actividades todo el año</h2>
+                    <p>Programamos experiencias para que cualquier estudiante, sin importar su semestre, pueda participar y aprender.</p>
+                </div>
+
+                <!-- Carrusel de actividades (3 fotos por apartado) -->
+                <div class="carrusel" id="carruselActividades">
+                    <div class="carrusel-pista" id="carruselPista">
+                        <article class="carrusel-slide">
+                            <div class="carrusel-galeria">
+                                <img src="img/Taller EDs.jpeg" alt="Foto de referencia: taller técnico">
+                                <img src="img/taller 2.jpeg" alt="Foto de referencia: taller de electrónica">
+                                <img src="img/taller 3.jpeg" alt="Foto de referencia: impresión 3D">
+                            </div>
+                            <div class="carrusel-texto">
+                                <span class="actividad-num">01</span>
+                                <h3>Talleres técnicos</h3>
+                                <p>Programación, electrónica, impresión 3D, inteligencia artificial y ciberseguridad, dictados por miembros y invitados.</p>
+                            </div>
+                        </article>
+
+                        <article class="carrusel-slide">
+                            <div class="carrusel-galeria">
+                                <img src="img/lito.jpg" alt="Foto de referencia: conferencia">
+                                <img src="img/caro.JPG" alt="Foto de referencia: ponente invitado">
+                                <img src="img/IMG_8753.JPG" alt="Foto de referencia: público en el auditorio">
+                            </div>
+                            <div class="carrusel-texto">
+                                <span class="actividad-num">02</span>
+                                <h3>Conferencias</h3>
+                                <p>Ponencias con profesionales e investigadores que conectan lo académico con la industria real.</p>
+                            </div>
+                        </article>
+
+                        <article class="carrusel-slide">
+                            <div class="carrusel-galeria">
+                                <img src="img/social 3.jpg" alt="Foto de referencia: servicio y comunidad">
+                                <img src="img/Niñas.JPG" alt="Foto de referencia: divulgación en colegios">
+                                <img src="img/social.jpeg" alt="Foto de referencia: donaciones y voluntariado">
+                            </div>
+                            <div class="carrusel-texto">
+                                <span class="actividad-num">03</span>
+                                <h3>Servicio y comunidad</h3>
+                                <p>Divulgación en colegios, jornadas de orientación tecnológica y actividades de impacto social.</p>
+                            </div>
+                        </article>
+
+                        <article class="carrusel-slide">
+                            <div class="carrusel-galeria">
+                                <img src="img/visita 2.jpeg" alt="Foto de referencia: recorrido por planta industrial">
+                                <img src="img/visita 1.jpeg" alt="Foto de referencia: visita a empresa de tecnología">
+                                <img src="img/visita 3.jpeg" alt="Foto de referencia: proceso industrial en vivo">
+                            </div>
+                            <div class="carrusel-texto">
+                                <span class="actividad-num">04</span>
+                                <h3>Visita técnica</h3>
+                                <p>Recorridos a empresas como AEROMAN, ARBEX, PROMAQ e Nipro Medical para ver de primera mano cómo funciona la ingeniería en la industria real.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <button type="button" class="carrusel-flecha anterior" aria-label="Actividad anterior">‹</button>
+                    <button type="button" class="carrusel-flecha siguiente" aria-label="Actividad siguiente">›</button>
+                    <div class="carrusel-puntos" id="carruselPuntos"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EVENTO ============ -->
+        <section class="seccion" id="evento">
+            <div class="contenedor">
+                <div class="seccion-cabecera">
+                    <span class="etiqueta">Nuestro evento más importante</span>
+                    <h2>Technical Week 2026</h2>
+                    <p>
+                        La Technical Week de IEEE UDB es una semana dedicada a la tecnología, la innovación y el aprendizaje, donde los diferentes capítulos y grupos de afinidad de la Rama Estudiantil se unen para compartir conocimientos, desarrollar habilidades y conectar a los estudiantes con profesionales de la industria.</p>
+
+<p>A través de conferencias, talleres, demostraciones, visitas técnicas, actividades prácticas y espacios de integración, la Technical Week busca acercar a los estudiantes a las tendencias actuales de la ingeniería y motivarlos a convertir sus conocimientos en soluciones para el futuro.</p>
+                        <strong>Una semana, muchas disciplinas, una misma visión: aprender, conectar e innovar para transformar el futuro</strong>
+                  
+                </div>
+
+                <div class="evento">
+                    <div class="evento-info">
+                        <span class="badge">Edición anual</span>
+                        <h3 class="evento-nombre">Technical Week 2026</h3>
+                        <p class="evento-desc">
+                            Una semana de innovación, aprendizaje y conexión, donde los capítulos IEEE comparten conocimientos, experiencias y tecnología para inspirar a la próxima generación de ingenieros.
+                        </p>
+
+                        <div class="evento-datos">
+                            <div class="evento-dato">
+                                <span class="evento-dato-ico">📅</span>
+                                <div><strong>Fechas</strong><span>09 al 17 de Julio de 2026</span></div>
+                            </div>
+                            <div class="evento-dato">
+                                <span class="evento-dato-ico">📍</span>
+                                <div><strong>Lugar</strong><span>Campus Universidad Don Bosco</span></div>
+                            </div>
+                            <div class="evento-dato">
+                                <span class="evento-dato-ico">👥</span>
+                                <div><strong>Asistentes Durante los 7 días</strong><span> Más de 350 personas</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="evento-galeria">
+                        <h4>Galería del evento</h4>
+                        <div class="carrusel carrusel-evento" id="carruselEvento">
+                            <div class="carrusel-pista" id="carruselPistaEvento">
+                                <figure class="carrusel-slide evento-slide">
+                                    <img src="img/Inaguración.jpeg" alt="Ambiente general del evento">
+                                    <figcaption>Ambiente general</figcaption>
+                                </figure>
+                                <figure class="carrusel-slide evento-slide">
+                                    <img src="img/CEO.jpeg" alt="Conferencia del evento">
+                                    <figcaption>Conferencias</figcaption>
+                                </figure>
+                                <figure class="carrusel-slide evento-slide">
+                                    <img src="img/TW.jpeg" alt="Comunidad durante el evento">
+                                    <figcaption>Comunidad</figcaption>
+                                </figure>
+
+                            </div>
+
+                            <button type="button" class="carrusel-flecha anterior" aria-label="Foto anterior">‹</button>
+                            <button type="button" class="carrusel-flecha siguiente" aria-label="Foto siguiente">›</button>
+                            <div class="carrusel-puntos"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TW EN NÚMEROS ============ -->
+        <section class="seccion alterna" id="tw-numeros">
+            <div class="contenedor">
+                <div class="seccion-cabecera">
+                    <span class="etiqueta">Technical Week 2026</span>
+                    <h2>La TW en números</h2>
+                    <p>Un vistazo a lo que vivimos durante los 7 días de Technical Week en el campus.</p>
+                </div>
+
+                <!-- EDITA LAS CIFRAS DE ABAJO -->
+                <div class="tw-kpis">
+                    <div class="tw-kpi">
+                        <span class="tw-kpi-valor">350</span>
+                        <span class="tw-kpi-etiqueta">Participantes</span>
+                    </div>
+                    <div class="tw-kpi">
+                        <span class="tw-kpi-valor">13</span>
+                        <span class="tw-kpi-etiqueta">Actividades realizadas</span>
+                    </div>
+                    <div class="tw-kpi">
+                        <span class="tw-kpi-valor">+20</span>
+                        <span class="tw-kpi-etiqueta">Miembros nuevos</span>
+                    </div>
+                </div>
+
+                <div class="tw-actividades">
+                    <h3>Actividades por tipo <span class="tw-total">13 en total</span></h3>
+                    <!-- EDITA EL VALOR Y EL ANCHO (width en %) DE CADA BARRA; que sumen el total -->
+                    <div class="tw-barra">
+                        <span class="tw-barra-nombre">Talleres</span>
+                        <div class="tw-barra-pista"><div class="tw-barra-relleno" style="width: 100%"></div></div>
+                        <span class="tw-barra-valor">4</span>
+                    </div>
+                    <div class="tw-barra">
+                        <span class="tw-barra-nombre">Conferencias</span>
+                        <div class="tw-barra-pista"><div class="tw-barra-relleno" style="width: 100%"></div></div>
+                        <span class="tw-barra-valor">4</span>
+                    </div>
+                    <div class="tw-barra">
+                        <span class="tw-barra-nombre">Visitas</span>
+                        <div class="tw-barra-pista"><div class="tw-barra-relleno" style="width: 75%"></div></div>
+                        <span class="tw-barra-valor">3</span>
+                    </div>
+                    <div class="tw-barra">
+                        <span class="tw-barra-nombre">Webinars</span>
+                        <div class="tw-barra-pista"><div class="tw-barra-relleno" style="width: 50%"></div></div>
+                        <span class="tw-barra-valor">2</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DASHBOARD ============ -->
+        <section class="seccion oscura" id="dashboard">
+            <div class="contenedor">
+                <div class="seccion-cabecera claro">
+                    <span class="etiqueta">Dashboard</span>
+                    <h2>Nuestros indicadores en datos</h2>
+                </div>
+
+                <!-- KPIs -->
+                <div class="kpis">
+                    <div class="kpi">
+                        <span class="kpi-etiqueta">Miembros de la rama</span>
+                        <span class="kpi-valor" data-contador="167">0</span>
+                        <span class="kpi-variacion positiva">Rama IEEE UDB</span>
+                    </div>
+                    <div class="kpi">
+                        <span class="kpi-etiqueta">Actividades totales</span>
+                        <span class="kpi-valor" data-contador="117">0</span>
+                        <span class="kpi-variacion positiva">Suma de las 12 sociedades</span>
+                    </div>
+                    <div class="kpi">
+                        <span class="kpi-etiqueta">Capitulos Estudiantiles</span>
+                        <span class="kpi-valor" data-contador="12">0</span>
+                        <span class="kpi-variacion positiva">Capítulos y grupos</span>
+                    </div>
+                </div>
+
+                <!-- Gráficos -->
+                <div class="rejilla dos dashboard-rejilla">
+                    <div class="panel">
+                        <div class="panel-cabecera">
+                            <h3>Actividades por society</h3>
+                            <span class="panel-nota">117 en total</span>
+                        </div>
+                        <canvas id="graficoBarras" height="240" aria-label="Gráfico de barras de actividades por society"></canvas>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-cabecera">
+                            <h3>Miembros por Capitulo Estudiantil</h3>
+                            <span class="panel-nota">371 en societies</span>
+                        </div>
+                        <canvas id="graficoLinea" height="240" aria-label="Gráfico de barras de miembros por society"></canvas>
+                    </div>
+                </div>
+
+                <div class="rejilla dos dashboard-rejilla">
+                    <div class="panel">
+                        <div class="panel-cabecera">
+                            <h3>Colaboraciones por área · 2026</h3>
+                        </div>
+                        <div class="donut-fila">
+                            <canvas id="graficoDonut" width="180" height="180" aria-label="Gráfico de dona de colaboraciones por área"></canvas>
+                            <ul class="leyenda" id="leyendaDonut"></ul>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-cabecera">
+                            <h3>Detalle por society</h3>
+                        </div>
+                        <div class="tabla-envoltura">
+                            <table class="tabla" id="tablaActividades">
+                                <thead>
+                                    <tr>
+                                        <th>Society</th>
+                                        <th>Actividades</th>
+                                        <th>Miembros</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+
+    </main>
+
+    <!-- ============ PIE ============ -->
+    <footer class="pie">
+        <div class="contenedor pie-interno">
+            <span>Presentación Realizada por Jeniffer Saravia Chair IEEE Universidad Don Bosco</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
