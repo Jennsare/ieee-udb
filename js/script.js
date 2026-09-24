@@ -14,22 +14,22 @@
 const datos = {
     // sigla, actividades y miembros por society
     societies: [
-        { sigla: "AESS",   nombre: "Aerospace & Electronic Systems", actividades: 5,  miembros: 12 },
-        { sigla: "CS",     nombre: "Computer Society",               actividades: 9, miembros: 39 },
-        { sigla: "COMSOC", nombre: "Communications Society",         actividades: 3,  miembros: 6  },
-        { sigla: "CASS",   nombre: "Circuits & Systems Society",     actividades: 2,  miembros: 20 },
-        { sigla: "EDS",    nombre: "Electron Devices Society",       actividades: 6, miembros: 46 },
-        { sigla: "EMBS",   nombre: "Engineering in Medicine & Biology", actividades: 8, miembros: 39 },
-        { sigla: "IAS",    nombre: "Industry Applications Society",  actividades: 9, miembros: 27 },
+        { sigla: "AESS",   nombre: "Aerospace & Electronic Systems", actividades: 3,  miembros: 12 },
+        { sigla: "CS",     nombre: "Computer Society",               actividades: 4, miembros: 39 },
+        { sigla: "COMSOC", nombre: "Communications Society",         actividades: 1,  miembros: 6  },
+        { sigla: "CASS",   nombre: "Circuits & Systems Society",     actividades: 1,  miembros: 20 },
+        { sigla: "EDS",    nombre: "Electron Devices Society",       actividades: 4, miembros: 46 },
+        { sigla: "EMBS",   nombre: "Engineering in Medicine & Biology", actividades: 10, miembros: 39 },
+        { sigla: "IAS",    nombre: "Industry Applications Society",  actividades: 7, miembros: 27 },
         { sigla: "PES",    nombre: "Power & Energy Society",         actividades: 2,  miembros: 21 },
-        { sigla: "RAS",    nombre: "Robotics & Automation Society",  actividades: 9, miembros: 23 },
-        { sigla: "SIGHT",  nombre: "Special Interest Group on Humanitarian Tech", actividades: 5, miembros: 50 },
-        { sigla: "TEMS",   nombre: "Technology & Engineering Management", actividades: 5, miembros: 26 },
-        { sigla: "WIE",    nombre: "Women in Engineering",           actividades: 7, miembros: 62 }
+        { sigla: "RAS",    nombre: "Robotics & Automation Society",  actividades: 15, miembros: 23 },
+        { sigla: "SIGHT",  nombre: "Special Interest Group on Humanitarian Tech", actividades: 9, miembros: 50 },
+        { sigla: "TEMS",   nombre: "Technology & Engineering Management", actividades: 1, miembros: 26 },
+        { sigla: "WIE",    nombre: "Women in Engineering",           actividades: 11, miembros: 62 }
     ],
 
     // Fila "Rama" de la tabla original
-    rama: { sigla: "Rama", nombre: "Rama estudiantil IEEE UDB", actividades: null, miembros: 167 },
+    rama: { sigla: "Rama", nombre: "Rama estudiantil IEEE UDB", actividades: 2, miembros: 167 },
 
     // Colaboraciones 2026 detectadas en Instagram, clasificadas por área.
     // Base: barrido de @ieeeudb (65 posts) + 11 capítulos del linktree (220 posts) = 285 posts de 2026.
@@ -43,11 +43,19 @@ const datos = {
         { etiqueta: "Salud biomédica", valor: 1, empresas: "Nipro Medical El Salvador", color: "#CFEDFF" },
         { etiqueta: "Gestión pública", valor: 1, empresas: "COMPRASAL", color: "#0077B6" }
     ],
+    tipos: [
+        { etiqueta: "Admin.",       valor: 22 },
+        { etiqueta: "Humanit.",     valor: 4 },
+        { etiqueta: "No téc.",      valor: 8 },
+        { etiqueta: "Pre-U STEM",   valor: 1 },
+        { etiqueta: "Profes.",      valor: 10 },
+        { etiqueta: "Técnicas",     valor: 25 }
+    ],
     colaboraciones2026: 19
 };
 
 /* Totales calculados */
-const TOTAL_ACTIVIDADES = datos.societies.reduce((s, d) => s + d.actividades, 0);   // suma por society
+const TOTAL_ACTIVIDADES = datos.societies.reduce((s, d) => s + d.actividades, 0) + (datos.rama.actividades || 0);   // 68 capitulos + 2 rama = 70
 
 /* ---------------------------------------------------------
    2. MENÚ MÓVIL
@@ -222,7 +230,7 @@ function dibujarBarras(canvasId, serie, opciones = {}) {
 function graficoActividades() {
     dibujarBarras(
         "graficoBarras",
-        datos.societies.map(s => ({ etiqueta: s.sigla, valor: s.actividades })),
+        datos.societies.concat([{ sigla: "Rama", actividades: datos.rama.actividades }]).map(s => ({ etiqueta: s.sigla, valor: s.actividades })),
         { mostrarValor: true, colorInicio: "#4DBDFF", colorFin: "#00A3E0" }
     );
 }
@@ -236,6 +244,18 @@ function graficoMiembros() {
         "graficoLinea",
         datos.societies.map(s => ({ etiqueta: s.sigla, valor: s.miembros })),
         { mostrarValor: true, colorInicio: "#7ED4FF", colorFin: "#00629B" }
+    );
+}
+
+/* ---------------------------------------------------------
+   7b. GRÁFICO — actividades por tipo
+--------------------------------------------------------- */
+
+function graficoTipos() {
+    dibujarBarras(
+        "graficoTipos",
+        datos.tipos,
+        { mostrarValor: true, colorInicio: "#00A3E0", colorFin: "#003A66" }
     );
 }
 
@@ -313,7 +333,7 @@ function pintarTabla() {
     filas.push(`
         <tr>
             <td><strong>${datos.rama.sigla}</strong></td>
-            <td>—</td>
+            <td>${datos.rama.actividades}</td>
             <td>${datos.rama.miembros}</td>
         </tr>`);
 
@@ -382,6 +402,7 @@ if (anioEl) anioEl.textContent = new Date().getFullYear();
 function dibujarTodo() {
     graficoActividades();
     graficoMiembros();
+    graficoTipos();
     graficoDonut();
 }
 
