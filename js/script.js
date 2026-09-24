@@ -14,18 +14,18 @@
 const datos = {
     // sigla, actividades y miembros por society
     societies: [
-        { sigla: "AESS",   nombre: "Aerospace & Electronic Systems", actividades: 8,  miembros: 12 },
-        { sigla: "CS",     nombre: "Computer Society",               actividades: 15, miembros: 39 },
-        { sigla: "COMSOC", nombre: "Communications Society",         actividades: 4,  miembros: 6  },
-        { sigla: "CASS",   nombre: "Circuits & Systems Society",     actividades: 3,  miembros: 20 },
-        { sigla: "EDS",    nombre: "Electron Devices Society",       actividades: 10, miembros: 46 },
-        { sigla: "EMBS",   nombre: "Engineering in Medicine & Biology", actividades: 13, miembros: 39 },
-        { sigla: "IAS",    nombre: "Industry Applications Society",  actividades: 15, miembros: 27 },
-        { sigla: "PES",    nombre: "Power & Energy Society",         actividades: 4,  miembros: 21 },
-        { sigla: "RAS",    nombre: "Robotics & Automation Society",  actividades: 15, miembros: 23 },
-        { sigla: "SIGHT",  nombre: "Special Interest Group on Humanitarian Tech", actividades: 9, miembros: 50 },
-        { sigla: "TEMS",   nombre: "Technology & Engineering Management", actividades: 9, miembros: 26 },
-        { sigla: "WIE",    nombre: "Women in Engineering",           actividades: 12, miembros: 62 }
+        { sigla: "AESS",   nombre: "Aerospace & Electronic Systems", actividades: 5,  miembros: 12 },
+        { sigla: "CS",     nombre: "Computer Society",               actividades: 9, miembros: 39 },
+        { sigla: "COMSOC", nombre: "Communications Society",         actividades: 3,  miembros: 6  },
+        { sigla: "CASS",   nombre: "Circuits & Systems Society",     actividades: 2,  miembros: 20 },
+        { sigla: "EDS",    nombre: "Electron Devices Society",       actividades: 6, miembros: 46 },
+        { sigla: "EMBS",   nombre: "Engineering in Medicine & Biology", actividades: 8, miembros: 39 },
+        { sigla: "IAS",    nombre: "Industry Applications Society",  actividades: 9, miembros: 27 },
+        { sigla: "PES",    nombre: "Power & Energy Society",         actividades: 2,  miembros: 21 },
+        { sigla: "RAS",    nombre: "Robotics & Automation Society",  actividades: 9, miembros: 23 },
+        { sigla: "SIGHT",  nombre: "Special Interest Group on Humanitarian Tech", actividades: 5, miembros: 50 },
+        { sigla: "TEMS",   nombre: "Technology & Engineering Management", actividades: 5, miembros: 26 },
+        { sigla: "WIE",    nombre: "Women in Engineering",           actividades: 7, miembros: 62 }
     ],
 
     // Fila "Rama" de la tabla original
