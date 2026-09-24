@@ -47,9 +47,7 @@ const datos = {
 };
 
 /* Totales calculados */
-const TOTAL_ACTIVIDADES = datos.societies.reduce((s, d) => s + d.actividades, 0);   // 117
-const TOTAL_SOCIETIES = datos.societies.reduce((s, d) => s + d.miembros, 0);        // 371
-const TOTAL_MIEMBROS = TOTAL_SOCIETIES + datos.rama.miembros;                       // 538
+const TOTAL_ACTIVIDADES = datos.societies.reduce((s, d) => s + d.actividades, 0);   // suma por society
 
 /* ---------------------------------------------------------
    2. MENÚ MÓVIL
@@ -323,7 +321,7 @@ function pintarTabla() {
         <tr class="total">
             <td><strong>Total</strong></td>
             <td><strong>${TOTAL_ACTIVIDADES}</strong></td>
-            <td><strong>${TOTAL_MIEMBROS}</strong></td>
+            <td>—</td>
         </tr>`);
 
     cuerpo.innerHTML = filas.join("");

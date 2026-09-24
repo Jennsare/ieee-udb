@@ -346,6 +346,20 @@ h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 0.6em; }
 
 .tarjeta p { margin: 0; color: var(--texto-suave); font-size: 15px; }
 
+/* Estrategias de mejora: insignia numerada */
+.estrategia-num {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--azul);
+    background: rgba(0, 98, 155, 0.08);
+    border: 1px solid rgba(0, 98, 155, 0.22);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+}
+
 
 
 /* Equipo / listas */
