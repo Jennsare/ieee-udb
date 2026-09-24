@@ -1,19 +1,19 @@
 /* =========================================================
    SCRIPT.JS — IEEE UDB
    Menú, contadores animados, gráficos (canvas) y tabla.
-   DATOS REALES: societies IEEE UDB (12) + Rama.
+   DATOS REALES: sociedades IEEE UDB (12) + Rama.
    EDITA EL OBJETO "datos" PARA CAMBIAR LOS NÚMEROS.
    ========================================================= */
 
 "use strict";
 
 /* ---------------------------------------------------------
-   1. DATOS (tabla de societies — actualiza aquí)
+   1. DATOS (tabla de sociedades — actualiza aquí)
 --------------------------------------------------------- */
 
 const datos = {
-    // sigla, actividades y miembros por society
-    societies: [
+    // sigla, actividades y miembros por sociedad
+    sociedades: [
         { sigla: "AESS",   nombre: "Aerospace & Electronic Systems", actividades: 3,  miembros: 12 },
         { sigla: "CS",     nombre: "Computer Society",               actividades: 4, miembros: 39 },
         { sigla: "COMSOC", nombre: "Communications Society",         actividades: 1,  miembros: 6  },
@@ -55,7 +55,7 @@ const datos = {
 };
 
 /* Totales calculados */
-const TOTAL_ACTIVIDADES = datos.societies.reduce((s, d) => s + d.actividades, 0) + (datos.rama.actividades || 0);   // 68 capitulos + 2 rama = 70
+const TOTAL_ACTIVIDADES = datos.sociedades.reduce((s, d) => s + d.actividades, 0) + (datos.rama.actividades || 0);   // 68 capitulos + 2 rama = 70
 
 /* ---------------------------------------------------------
    2. MENÚ MÓVIL
@@ -138,7 +138,7 @@ document.querySelectorAll("[data-contador]").forEach(el => observadorContadores.
 function prepararCanvas(canvas) {
     const ratio = window.devicePixelRatio || 1;
     const anchoCSS = canvas.clientWidth || canvas.width;
-    const altoCSS = canvas.getAttribute("height") ? Number(canvas.getAttribute("height")) : canvas.clientHeight;
+    const altoCSS = canvas.clientHeight || (canvas.getAttribute("height") ? Number(canvas.getAttribute("height")) : 240);
 
     canvas.width = anchoCSS * ratio;
     canvas.height = altoCSS * ratio;
@@ -158,7 +158,7 @@ function dibujarRejilla(ctx, ancho, alto, margen, maximo, divisiones) {
     ctx.lineWidth = 1;
 
     for (let i = 0; i <= divisiones; i++) {
-        const y = margen + ((alto - margen) / divisiones) * i;
+        const y = margen + ((alto - 2 * margen) / divisiones) * i;
         const valor = Math.round(maximo - (maximo / divisiones) * i);
 
         ctx.beginPath();
@@ -187,7 +187,7 @@ function dibujarBarras(canvasId, serie, opciones = {}) {
     const anchoBarra = separacion * 0.62;
 
     serie.forEach((d, i) => {
-        const altura = ((alto - margen) / maximo) * d.valor;
+        const altura = ((alto - 2 * margen) / maximo) * d.valor;
         const x = margen + separacion * i + (separacion - anchoBarra) / 2;
         const y = alto - margen - altura;
 
@@ -224,25 +224,25 @@ function dibujarBarras(canvasId, serie, opciones = {}) {
 }
 
 /* ---------------------------------------------------------
-   6. GRÁFICO — actividades por society
+   6. GRÁFICO — actividades por sociedad
 --------------------------------------------------------- */
 
 function graficoActividades() {
     dibujarBarras(
         "graficoBarras",
-        datos.societies.concat([{ sigla: "Rama", actividades: datos.rama.actividades }]).map(s => ({ etiqueta: s.sigla, valor: s.actividades })),
+        datos.sociedades.concat([{ sigla: "Rama", actividades: datos.rama.actividades }]).map(s => ({ etiqueta: s.sigla, valor: s.actividades })),
         { mostrarValor: true, colorInicio: "#4DBDFF", colorFin: "#00A3E0" }
     );
 }
 
 /* ---------------------------------------------------------
-   7. GRÁFICO — miembros por society
+   7. GRÁFICO — miembros por sociedad
 --------------------------------------------------------- */
 
 function graficoMiembros() {
     dibujarBarras(
         "graficoLinea",
-        datos.societies.map(s => ({ etiqueta: s.sigla, valor: s.miembros })),
+        datos.sociedades.map(s => ({ etiqueta: s.sigla, valor: s.miembros })),
         { mostrarValor: true, colorInicio: "#7ED4FF", colorFin: "#00629B" }
     );
 }
@@ -260,7 +260,7 @@ function graficoTipos() {
 }
 
 /* ---------------------------------------------------------
-   8. GRÁFICO DE DONA — rama vs. societies
+   8. GRÁFICO DE DONA — rama vs. sociedades
 --------------------------------------------------------- */
 
 function graficoDonut() {
@@ -313,14 +313,14 @@ function graficoDonut() {
 }
 
 /* ---------------------------------------------------------
-   9. TABLA — detalle por society
+   9. TABLA — detalle por sociedad
 --------------------------------------------------------- */
 
 function pintarTabla() {
     const cuerpo = document.querySelector("#tablaActividades tbody");
     if (!cuerpo) return;
 
-    const filas = datos.societies.map(
+    const filas = datos.sociedades.map(
         s => `
             <tr>
                 <td title="${s.nombre}">${s.sigla}</td>
